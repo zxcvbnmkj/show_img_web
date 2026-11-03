@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>showimg</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect x='1' y='2' width='14' height='12' rx='2' fill='%232563eb'/%3E%3Cpath d='M3 12l3-4 2 2 2-3 3 5z' fill='%23fff'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="/__showimg/style.css">
+</head>
+<body>
+  <header class="topbar">
+    <h1 class="title" id="title">showimg</h1>
+    <span class="stat" id="stat"></span>
+    <form class="dir-form" id="dir-form">
+      <input class="dir-input" id="dir-input" list="dir-history" placeholder="粘贴本机目录路径，回车打开（支持 ~）" autocomplete="off" spellcheck="false">
+      <datalist id="dir-history"></datalist>
+      <button type="submit" class="dir-open">打开</button>
+      <span class="dir-error" id="dir-error" role="alert"></span>
+    </form>
+    <input class="filter" id="filter" type="search" placeholder="按文件名过滤…" autocomplete="off">
+  </header>
+
+  <div class="layout">
+    <main class="viewer" id="viewer">
+      <div class="stage" id="stage">
+        <img class="photo" id="photo" alt="" hidden>
+        <div class="empty" id="empty" hidden></div>
+      </div>
+      <button type="button" class="nav nav-prev" id="prev" aria-label="上一张" title="上一张（←）">‹</button>
+      <button type="button" class="nav nav-next" id="next" aria-label="下一张" title="下一张（→）">›</button>
+      <div class="caption">
+        <span class="caption-left">
+          <span class="caption-path" id="caption-path" title="点击复制本机路径"></span>
+          <button type="button" class="copy-btn" id="copy-path" hidden>复制路径</button>
+        </span>
+        <span class="caption-meta" id="caption-meta"></span>
+      </div>
+    </main>
+    <aside class="sidebar" id="sidebar">
+      <button type="button" class="sidebar-reopen" id="sidebar-open" title="展开目录" aria-label="展开目录">‹<span>目录</span></button>
+      <div class="sidebar-head">
+        <button type="button" class="sidebar-hide" id="sidebar-hide" title="收起目录" aria-label="收起目录">›</button>
+        <span class="sidebar-title">目录</span>
+        <span class="sidebar-actions">
+          <button type="button" id="expand-all">全部展开</button>
+          <button type="button" id="collapse-all">全部折叠</button>
+        </span>
+      </div>
+      <nav class="tree" id="tree"></nav>
+    </aside>
+  </div>
+
+  <script src="/__showimg/client.js"></script>
+</body>
+</html>

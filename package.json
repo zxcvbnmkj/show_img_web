@@ -1,0 +1,18 @@
+{
+  "name": "show-img",
+  "version": "0.1.0",
+  "description": "在任意目录执行 showimg dev，浏览器里预览该目录（含子目录）下的全部图片",
+  "type": "module",
+  "bin": {
+    "showimg": "bin/showimg.js"
+  },
+  "files": [
+    "bin",
+    "src",
+    "assets"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "license": "MIT"
+}

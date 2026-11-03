@@ -1,0 +1,10 @@
+# 依赖（目前零依赖，留着防以后引入）
+node_modules/
+
+# IDE / 系统文件
+.idea/
+.vscode/
+.DS_Store
+
+# npm pack 产物
+*.tgz
