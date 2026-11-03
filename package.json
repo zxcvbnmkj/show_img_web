@@ -1,7 +1,14 @@
 {
-  "name": "show-img",
+  "name": "showimg-cli",
   "version": "0.1.0",
-  "description": "在任意目录执行 showimg dev，浏览器里预览该目录（含子目录）下的全部图片",
+  "description": "在任意目录执行 showimg dev，浏览器里逐张预览该目录（含子目录）下的全部图片",
+  "keywords": [
+    "image",
+    "viewer",
+    "preview",
+    "gallery",
+    "cli"
+  ],
   "type": "module",
   "bin": {
     "showimg": "bin/showimg.js"
